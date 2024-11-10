@@ -2,7 +2,7 @@
   "name": "dev-utilities",
   "displayName": "Dev Utilities",
   "description": "A versatile VS Code extension with essential utilities for various development tasks",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "engines": {
     "vscode": "^1.86.0"
   },

@@ -6,6 +6,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [0.0.12]
 
+### Fixed
+
+- CSS Updates
+
+## [0.0.12]
+
 ### Added
 
 - Separate out JSON Query Escaper and Unescaper
