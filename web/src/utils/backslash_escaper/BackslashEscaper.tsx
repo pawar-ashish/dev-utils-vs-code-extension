@@ -17,7 +17,14 @@ const BackslashEscaper: React.FC<BackslashEscaperProps> = ({
   const [escapedText, setEscapedText] = useState<string>("");
 
   const escapeBackslashes = (text: string) => {
-    return text.replace(/\\/g, "\\\\");
+    return text
+      .replace(/\\/g, "\\\\") // Escapes backslashes
+      .replace(/\n/g, "\\n") // Escapes new line
+      .replace(/\r/g, "\\r") // Escapes carriage return
+      .replace(/\t/g, "\\t") // Escapes horizontal tab
+      .replace(/\v/g, "\\v") // Escapes vertical tab
+      .replace(/\'/g, "\\'") // Escapes single quotation mark
+      .replace(/\"/g, '\\"'); // Escapes double quotation mark
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -80,6 +87,30 @@ const BackslashEscaper: React.FC<BackslashEscaperProps> = ({
       <Card className="example-card">
         <H4>Example Usage</H4>
         <p>Here's how the Backslash Escaper works:</p>
+        <ul className="escape-list">
+          <li>
+            Backslash becomes <code>\\</code>
+          </li>
+          <li>
+            New line becomes <code>\n</code>
+          </li>
+          <li>
+            Tab becomes <code>\t</code>
+          </li>
+          <li>
+            Carriage return becomes <code>\r</code>
+          </li>
+          <li>
+            Vertical tab becomes <code>\v</code>
+          </li>
+          <li>
+            Single quote becomes <code>\'</code>
+          </li>
+          <li>
+            Double quote becomes <code>\"</code>
+          </li>
+          <br />
+        </ul>
 
         <div className="text-inputs">
           <div className="text-input">
@@ -90,8 +121,13 @@ const BackslashEscaper: React.FC<BackslashEscaperProps> = ({
               fill={true}
               large={true}
               readOnly={true}
-              value={`Example with a single backslash: \\
-Multiple backslashes in text: \\\\`}
+              value={`String with special characters:
+This is a file path: C:\\\\Users\\\\User\\\\Documents\\\\File.txt
+New line example: Line 1\nLine 2
+Tab example: Column1\tColumn2
+Carriage return example: Line A\rLine B
+Single quote in string: \'It\'s a sunny day.\'
+Double quote in string: "She said, \"Hello!\"`}
             />
           </div>
           <div className="text-input">
@@ -102,8 +138,7 @@ Multiple backslashes in text: \\\\`}
               fill={true}
               large={true}
               readOnly={true}
-              value={`Example with a single backslash: \\\\
-Multiple backslashes in text: \\\\\\\\`}
+              value={`String with special characters:\\nThis is a file path: C:\\\\\\\\Users\\\\\\\\User\\\\\\\\Documents\\\\\\\\File.txt\\nNew line example: Line 1\\nLine 2\\nTab example: Column1\\tColumn2\\nCarriage return example: Line A\\rLine B\\nSingle quote in string: \\'It\\'s a sunny day.\\'\\nDouble quote in string: \\"She said, \\"Hello!\\"`}
             />
           </div>
         </div>

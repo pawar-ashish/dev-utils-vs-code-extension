@@ -37,8 +37,20 @@
   justify-content: space-between;
   width: 100%;
   gap: 10px;
+  align-items: start;
+  margin-top: 10px;
 }
 
 .text-input {
   flex: 1;
+}
+
+.unescape-list {
+  margin-top: 10px; /* Space above the unescape list */
+  padding-left: 20px; /* Indent the list */
+  list-style-type: disc; /* Use disc bullets */
+}
+
+.unescape-list li {
+  margin-bottom: 5px; /* Space between list items */
 }

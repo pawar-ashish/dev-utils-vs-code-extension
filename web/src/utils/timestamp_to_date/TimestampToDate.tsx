@@ -67,18 +67,16 @@ const TimestampToDate: React.FC<TimestampToDateProps> = ({
         </div>
 
         <H4>Unix Timestamp Input</H4>
-        <div className="text-inputs">
-          <TextArea
-            autoResize={true}
-            fill={true}
-            large={true}
-            value={timestampText}
-            onChange={handleInputChange}
-            placeholder="Enter Unix timestamp here..."
-          />
-        </div>
+        <TextArea
+          autoResize={true}
+          fill={true}
+          large={true}
+          value={timestampText}
+          onChange={handleInputChange}
+          placeholder="Enter Unix timestamp here..."
+        />
 
-        <H4>Date Time (UTC):</H4>
+        <H4>Date Time (UTC)</H4>
         <div className="text-inputs">
           <TextArea
             autoResize={true}
@@ -94,7 +92,7 @@ const TimestampToDate: React.FC<TimestampToDateProps> = ({
           </div>
         </div>
 
-        <H4>ISO 8601:</H4>
+        <H4>ISO 8601</H4>
         <div className="text-inputs">
           <TextArea
             autoResize={true}
@@ -110,7 +108,7 @@ const TimestampToDate: React.FC<TimestampToDateProps> = ({
           </div>
         </div>
 
-        <H4>Date Time (Your Time Zone):</H4>
+        <H4>Date Time (Your Time Zone)</H4>
         <div className="text-inputs">
           <TextArea
             autoResize={true}
@@ -133,7 +131,7 @@ const TimestampToDate: React.FC<TimestampToDateProps> = ({
           Below is an example of how to use the Timestamp to Date Converter:
         </p>
 
-        <H4>Example Timestamp Input:</H4>
+        <H4>Example Timestamp Input</H4>
 
         <TextArea
           className="example-input"
@@ -145,7 +143,7 @@ const TimestampToDate: React.FC<TimestampToDateProps> = ({
           placeholder="Example timestamp will be displayed here..."
         />
 
-        <H4>Date Time (UTC):</H4>
+        <H4>Date Time (UTC)</H4>
 
         <TextArea
           autoResize={true}
@@ -157,7 +155,7 @@ const TimestampToDate: React.FC<TimestampToDateProps> = ({
           placeholder="Example date in UTC will be displayed here..."
         />
 
-        <H4>ISO 8601:</H4>
+        <H4>ISO 8601</H4>
 
         <TextArea
           autoResize={true}
@@ -169,7 +167,7 @@ const TimestampToDate: React.FC<TimestampToDateProps> = ({
           placeholder="Example ISO 8601 date will be displayed here..."
         />
 
-        <H4>Date Time (Your Time Zone):</H4>
+        <H4>Date Time (Your Time Zone)</H4>
         <TextArea
           autoResize={true}
           fill={true}

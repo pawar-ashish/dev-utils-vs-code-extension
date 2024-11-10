@@ -33,8 +33,10 @@
 .text-inputs {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
+  align-items: start;
   gap: 10px;
 }
 
